@@ -1,3 +1,8 @@
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/tinper-bee/bee-popconfirm/compare/0.0.5...0.0.6) (2017-11-02)
+
+
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/tinper-bee/bee-popconfirm/compare/0.0.4...0.0.5) (2017-11-02)
 
