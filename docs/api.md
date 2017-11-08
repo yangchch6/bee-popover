@@ -1,4 +1,4 @@
-## Popconfirm 气泡弹出框
+## Popover 气泡弹出框
 
 点击元素弹出对话框。
 

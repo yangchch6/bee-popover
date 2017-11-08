@@ -4,146 +4,14 @@ import { Panel } from 'bee-panel';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Button from 'bee-button';
-import Popconfirm from '../src';
-import OverlayTrigger from 'bee-overlay/build/OverlayTrigger';
+
 
 const CARET = <i className="uf uf-chevronarrowdown"></i>;
 
 const CARETUP = <i className="uf uf-chevronarrowup"></i>;
 
 
-/**
- *
- * @title 气泡提示默认样式
- * @description
- */
-
-
-class Demo1 extends Component {
-    constructor(props){
-        super(props);
-    }
-    render () {
-        return (
-            <div style={{ height: 120 }}>
-              <Popconfirm
-                id="popover-basic"
-                placement="right"
-                positionLeft={200}
-                title="提醒"
-              >
-                您喜欢使用tinper-bee组件库吗？
-                
-              </Popconfirm>
-            </div>
-        )
-    }
-}
-/**
- *
- * @title 不同方向的气泡提示
- *
- */
-
- const popoverLeft = (
-   <Popconfirm id="popover-positioned-left" title="左侧弹出">
-     您喜欢使用tinper-bee组件库吗？
-   </Popconfirm>
- );
-
- const popoverTop = (
-   <Popconfirm id="popover-positioned-top" title="向上弹出">
-     您喜欢使用tinper-bee组件库吗？
-   </Popconfirm>
- );
-
- const popoverBottom = (
-   <Popconfirm id="popover-positioned-bottom" title="向下弹出">
-     您喜欢使用tinper-bee组件库吗？
-   </Popconfirm>
- );
-
- const popoverRight = (
-   <Popconfirm id="popover-positioned-right" title="右侧弹出">
-     您喜欢使用tinper-bee组件库吗？
-   </Popconfirm>
- );
-class Demo2 extends Component {
-    constructor(props){
-        super(props);
-    }
-    render () {
-        return (
-            <div className="demoPadding" style={{ marginLeft:"10%"}}>
-              <OverlayTrigger trigger="click" placement="left" overlay={popoverLeft}>
-                <Button colors="primary">向左!</Button>
-              </OverlayTrigger>
-              <OverlayTrigger trigger="click" placement="top" overlay={popoverTop}>
-                <Button colors="primary">向上!</Button>
-              </OverlayTrigger>
-              <OverlayTrigger trigger="click" placement="bottom" overlay={popoverBottom}>
-                <Button colors="primary">向下!</Button>
-              </OverlayTrigger>
-              <OverlayTrigger trigger="click" placement="right" overlay={popoverRight}>
-                <Button colors="primary">向右!</Button>
-              </OverlayTrigger>
-            </div>
-        )
-    }
-}
-/**
- *
- * @title 不同触发事件的气泡提示
- * @description 通过设置trigger属性来设置不同触发事件
- *
- */
-
- const popoverClick = (
-   <Popconfirm id="popover-trigger-click" title="向下弹出">
-     您喜欢使用tinper-bee组件库吗？
-   </Popconfirm>
- );
-
- const popoverHoverFocus = (
-   <Popconfirm id="popover-trigger-hover-focus" title="向下弹出">
-     您喜欢使用tinper-bee组件库吗？
-   </Popconfirm>
- );
-
- const popoverFocus = (
-   <Popconfirm id="popover-trigger-focus" title="向下弹出">
-     您喜欢使用tinper-bee组件库吗？
-   </Popconfirm>
- );
-
- const popoverClickRootClose = (
-   <Popconfirm id="popover-trigger-click-root-close" title="向下弹出">
-     您喜欢使用tinper-bee组件库吗？
-   </Popconfirm>
- );
-
-class Demo3 extends Component {
-
-    render () {
-        return (
-            <div className="demoPadding">
-            <OverlayTrigger trigger="click" placement="bottom" overlay={popoverClick}>
-              <Button colors="primary">点击</Button>
-            </OverlayTrigger>
-            <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popoverHoverFocus}>
-              <Button colors="primary">鼠标滑过或焦点事件</Button>
-            </OverlayTrigger>
-            <OverlayTrigger trigger="focus" placement="bottom" overlay={popoverFocus}>
-              <Button colors="primary">焦点事件</Button>
-            </OverlayTrigger>
-            <OverlayTrigger trigger="click" rootClose placement="bottom" overlay={popoverClickRootClose}>
-              <Button colors="primary">点击且点击其他关闭</Button>
-            </OverlayTrigger>
-            </div>
-        )
-    }
-}
-var DemoArray = [{"example":<Demo1 />,"title":" 气泡提示默认样式","code":"/**\r\n *\r\n * @title 气泡提示默认样式\r\n * @description\r\n */\r\n\r\n\r\nclass Demo1 extends Component {\r\n    constructor(props){\r\n        super(props);\r\n    }\r\n    render () {\r\n        return (\r\n            <div style={{ height: 120 }}>\r\n              <Popconfirm\r\n                id=\"popover-basic\"\r\n                placement=\"right\"\r\n                positionLeft={200}\r\n                title=\"提醒\"\r\n              >\r\n                您喜欢使用tinper-bee组件库吗？\r\n                \r\n              </Popconfirm>\r\n            </div>\r\n        )\r\n    }\r\n}\r\n","desc":""},{"example":<Demo2 />,"title":" 不同方向的气泡提示","code":"/**\r\n *\r\n * @title 不同方向的气泡提示\r\n *\r\n */\r\n\r\n const popoverLeft = (\r\n   <Popconfirm id=\"popover-positioned-left\" title=\"左侧弹出\">\r\n     您喜欢使用tinper-bee组件库吗？\r\n   </Popconfirm>\r\n );\r\n\r\n const popoverTop = (\r\n   <Popconfirm id=\"popover-positioned-top\" title=\"向上弹出\">\r\n     您喜欢使用tinper-bee组件库吗？\r\n   </Popconfirm>\r\n );\r\n\r\n const popoverBottom = (\r\n   <Popconfirm id=\"popover-positioned-bottom\" title=\"向下弹出\">\r\n     您喜欢使用tinper-bee组件库吗？\r\n   </Popconfirm>\r\n );\r\n\r\n const popoverRight = (\r\n   <Popconfirm id=\"popover-positioned-right\" title=\"右侧弹出\">\r\n     您喜欢使用tinper-bee组件库吗？\r\n   </Popconfirm>\r\n );\r\nclass Demo2 extends Component {\r\n    constructor(props){\r\n        super(props);\r\n    }\r\n    render () {\r\n        return (\r\n            <div className=\"demoPadding\" style={{ marginLeft:\"10%\"}}>\r\n              <OverlayTrigger trigger=\"click\" placement=\"left\" overlay={popoverLeft}>\r\n                <Button colors=\"primary\">向左!</Button>\r\n              </OverlayTrigger>\r\n              <OverlayTrigger trigger=\"click\" placement=\"top\" overlay={popoverTop}>\r\n                <Button colors=\"primary\">向上!</Button>\r\n              </OverlayTrigger>\r\n              <OverlayTrigger trigger=\"click\" placement=\"bottom\" overlay={popoverBottom}>\r\n                <Button colors=\"primary\">向下!</Button>\r\n              </OverlayTrigger>\r\n              <OverlayTrigger trigger=\"click\" placement=\"right\" overlay={popoverRight}>\r\n                <Button colors=\"primary\">向右!</Button>\r\n              </OverlayTrigger>\r\n            </div>\r\n        )\r\n    }\r\n}\r\n","desc":""},{"example":<Demo3 />,"title":" 不同触发事件的气泡提示","code":"/**\r\n *\r\n * @title 不同触发事件的气泡提示\r\n * @description 通过设置trigger属性来设置不同触发事件\r\n *\r\n */\r\n\r\n const popoverClick = (\r\n   <Popconfirm id=\"popover-trigger-click\" title=\"向下弹出\">\r\n     您喜欢使用tinper-bee组件库吗？\r\n   </Popconfirm>\r\n );\r\n\r\n const popoverHoverFocus = (\r\n   <Popconfirm id=\"popover-trigger-hover-focus\" title=\"向下弹出\">\r\n     您喜欢使用tinper-bee组件库吗？\r\n   </Popconfirm>\r\n );\r\n\r\n const popoverFocus = (\r\n   <Popconfirm id=\"popover-trigger-focus\" title=\"向下弹出\">\r\n     您喜欢使用tinper-bee组件库吗？\r\n   </Popconfirm>\r\n );\r\n\r\n const popoverClickRootClose = (\r\n   <Popconfirm id=\"popover-trigger-click-root-close\" title=\"向下弹出\">\r\n     您喜欢使用tinper-bee组件库吗？\r\n   </Popconfirm>\r\n );\r\n\r\nclass Demo3 extends Component {\r\n\r\n    render () {\r\n        return (\r\n            <div className=\"demoPadding\">\r\n            <OverlayTrigger trigger=\"click\" placement=\"bottom\" overlay={popoverClick}>\r\n              <Button colors=\"primary\">点击</Button>\r\n            </OverlayTrigger>\r\n            <OverlayTrigger trigger={['hover', 'focus']} placement=\"bottom\" overlay={popoverHoverFocus}>\r\n              <Button colors=\"primary\">鼠标滑过或焦点事件</Button>\r\n            </OverlayTrigger>\r\n            <OverlayTrigger trigger=\"focus\" placement=\"bottom\" overlay={popoverFocus}>\r\n              <Button colors=\"primary\">焦点事件</Button>\r\n            </OverlayTrigger>\r\n            <OverlayTrigger trigger=\"click\" rootClose placement=\"bottom\" overlay={popoverClickRootClose}>\r\n              <Button colors=\"primary\">点击且点击其他关闭</Button>\r\n            </OverlayTrigger>\r\n            </div>\r\n        )\r\n    }\r\n}\r\n","desc":" 通过设置trigger属性来设置不同触发事件"}]
+var Demo1 = require("./demolist/Demo1");var Demo2 = require("./demolist/Demo2");var DemoArray = [{"example":<Demo1 />,"title":" 气泡卡片默认样式","code":"/**\n *\n * @title 气泡卡片默认样式\n * @description 支持12个位置\n */\n\nimport {Component} from 'react';\nimport Popover from 'bee-popover';\nimport Button from 'bee-button';\n\n\n\n    constructor(props) {\n        super(props);\n    }\n\n    render() {\n        let content = (\n            <div>\n                <h3>消息</h3>\n                <ul>\n                    <li>您的服务器已宕机，请处理。</li>\n                    <li>您的手机已停机，请续费。</li>\n                    <li>你的工资已到账，请查收。</li>\n                </ul>\n            </div>\n        )\n        return (\n            <div style={{position: 'relative', height: 320, marginTop: 100, marginLeft: 250}}>\n                <Popover\n                    placement=\"leftTop\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 5,\n                            left: 0\n                        }}>左上</Button>\n                </Popover>\n                <Popover\n                    placement=\"left\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 55,\n                            left: 0\n                        }}>左\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"leftBottom\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 110,\n                            left: 0\n                        }}>左下</Button>\n                </Popover>\n                <Popover\n                    placement=\"topLeft\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 0,\n                            left: 100\n                        }}>上左\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"top\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 0,\n                            left: 200\n                        }}>上\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"topRight\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 0,\n                            left: 300\n                        }}>\n                        上右\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"rightTop\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 5,\n                            left: 400\n                        }}>右上\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"right\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 55,\n                            left: 400\n                        }}>右</Button>\n                </Popover>\n                <Popover\n                    placement=\"rightBottom\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 110,\n                            left: 400\n                        }}>右下</Button>\n                </Popover>\n                <Popover\n                    placement=\"bottomLeft\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 115,\n                            left: 100\n                        }}>下左</Button>\n                </Popover>\n                <Popover\n                    placement=\"bottom\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 115,\n                            left: 200\n                        }}>上</Button>\n                </Popover>\n                <Popover\n                    placement=\"bottomRight\"\n                    content={content}\n                    trigger=\"click\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 115,\n                            left: 300\n                        }}>下右</Button>\n                </Popover>\n            </div>\n        )\n    }\n}\n","desc":" 支持12个位置"},{"example":<Demo2 />,"title":" 气泡卡片默认样式","code":"/**\r\n *\r\n * @title 气泡卡片默认样式\r\n * @description 支持12个位置\r\n */\r\n\r\nimport {Component} from 'react';\r\nimport Popover from 'bee-popover';\r\nimport Button from 'bee-button';\r\n\r\n\r\n\r\n    constructor(props) {\r\n        super(props);\r\n        this.state = {\r\n            show: false\r\n        }\r\n    }\r\n\r\n    handleClose = () => {\r\n        this.setState({\r\n            show: false\r\n        })\r\n    }\r\n\r\n    render() {\r\n        let content = (\r\n            <div>\r\n                <p>请确认您的包裹已签收！</p>\r\n                <div>\r\n                    <Button\r\n                        colors=\"primary\"\r\n                        onClick={ this.handleClose }\r\n                        size=\"sm\">\r\n                        关闭\r\n                    </Button>\r\n                </div>\r\n            </div>\r\n        )\r\n        return (\r\n            <div>\r\n                <Popover\r\n                    placement=\"right\"\r\n                    overlay={content}\r\n                    trigger=\"click\"\r\n                    show={this.state.show}\r\n                >\r\n                    <Button\r\n                        colors=\"primary\"\r\n                        >确认按钮</Button>\r\n                </Popover>\r\n            </div>\r\n        )\r\n    }\r\n}\r\n","desc":" 支持12个位置"}]
 
 
 class Demo extends Component {

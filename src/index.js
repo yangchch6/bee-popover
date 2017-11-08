@@ -1,2 +1,2 @@
-import Popconfirm from './Popconfirm';
-export default Popconfirm;
+import Popover from './Popover';
+export default Popover;

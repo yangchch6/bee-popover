@@ -4,8 +4,7 @@ import { Panel } from 'bee-panel';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Button from 'bee-button';
-import Popconfirm from '../src';
-import OverlayTrigger from 'bee-overlay/build/OverlayTrigger';
+
 
 const CARET = <i className="uf uf-chevronarrowdown"></i>;
 

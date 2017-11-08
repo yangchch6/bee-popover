@@ -1,26 +1,194 @@
 /**
  *
- * @title 气泡提示默认样式
- * @description
+ * @title 气泡卡片默认样式
+ * @description 支持12个位置
  */
 
+import {Component} from 'react';
+import Popover from '../../src';
+import Button from 'bee-button';
 
-class Demo1 extends Component {
-    constructor(props){
+
+export default class Demo1 extends Component {
+    constructor(props) {
         super(props);
     }
-    render () {
+
+    render() {
+        let content = (
+            <div>
+                <h3>消息</h3>
+                <ul>
+                    <li>您的服务器已宕机，请处理。</li>
+                    <li>您的手机已停机，请续费。</li>
+                    <li>你的工资已到账，请查收。</li>
+                </ul>
+            </div>
+        )
         return (
-            <div style={{ height: 120 }}>
-              <Popconfirm
-                id="popover-basic"
-                placement="right"
-                positionLeft={200}
-                title="提醒"
-              >
-                您喜欢使用tinper-bee组件库吗？
-                
-              </Popconfirm>
+            <div style={{position: 'relative', height: 320, marginTop: 100, marginLeft: 250}}>
+                <Popover
+                    placement="leftTop"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 5,
+                            left: 0
+                        }}>左上</Button>
+                </Popover>
+                <Popover
+                    placement="left"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 55,
+                            left: 0
+                        }}>左
+                    </Button>
+                </Popover>
+                <Popover
+                    placement="leftBottom"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 110,
+                            left: 0
+                        }}>左下</Button>
+                </Popover>
+                <Popover
+                    placement="topLeft"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 100
+                        }}>上左
+                    </Button>
+                </Popover>
+                <Popover
+                    placement="top"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 200
+                        }}>上
+                    </Button>
+                </Popover>
+                <Popover
+                    placement="topRight"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 300
+                        }}>
+                        上右
+                    </Button>
+                </Popover>
+                <Popover
+                    placement="rightTop"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 5,
+                            left: 400
+                        }}>右上
+                    </Button>
+                </Popover>
+                <Popover
+                    placement="right"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 55,
+                            left: 400
+                        }}>右</Button>
+                </Popover>
+                <Popover
+                    placement="rightBottom"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 110,
+                            left: 400
+                        }}>右下</Button>
+                </Popover>
+                <Popover
+                    placement="bottomLeft"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 115,
+                            left: 100
+                        }}>下左</Button>
+                </Popover>
+                <Popover
+                    placement="bottom"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 115,
+                            left: 200
+                        }}>上</Button>
+                </Popover>
+                <Popover
+                    placement="bottomRight"
+                    content={content}
+                    trigger="click"
+                >
+                    <Button
+                        colors="primary"
+                        style={{
+                            position: 'absolute',
+                            top: 115,
+                            left: 300
+                        }}>下右</Button>
+                </Popover>
             </div>
         )
     }
