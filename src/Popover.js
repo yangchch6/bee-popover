@@ -6,8 +6,27 @@ import PropTypes from 'prop-types';
 import Overlay from 'bee-overlay/build/Overlay';
 import Portal from 'bee-overlay/build/Portal';
 import Content from './Content';
+import contains from 'dom-helpers/query/contains';
+
+//TODO: 当多个Popover在一个组件内时，显示一个会触发多个渲染。见demo1.
 
 const isReact16 = ReactDOM.createPortal !== undefined;
+
+const triggerType = PropTypes.oneOf(['click', 'hover', 'focus']);
+
+/**
+ * 检查值是属于这个值，还是等于这个值
+ *
+ * @param {string} one
+ * @param {string|array} of
+ * @returns {boolean}
+ */
+function isOneOf(one, of) {
+    if (Array.isArray(of)) {
+        return of.indexOf(one) >= 0;
+    }
+    return one === of;
+}
 
 const propTypes = {
     ...Overlay.propTypes,
@@ -23,6 +42,18 @@ const propTypes = {
      * 要覆盖在目标旁边的元素或文本。
      */
     content: PropTypes.node.isRequired,
+    /**
+     * 显示和隐藏覆盖一旦触发的毫秒延迟量
+     */
+    delay: PropTypes.number,
+    /**
+     * 触发后显示叠加层之前的延迟毫秒
+     */
+    delayShow: PropTypes.number,
+    /**
+     * 触发后隐藏叠加层的延迟毫秒
+     */
+    delayHide: PropTypes.number,
 
     /**
      * @private
@@ -45,6 +76,26 @@ const propTypes = {
      * @private
      */
     show: PropTypes.bool,
+
+    trigger: PropTypes.oneOfType([
+        triggerType, PropTypes.arrayOf(triggerType),
+    ]),
+    /**
+     * @private
+     */
+    onBlur: PropTypes.func,
+    /**
+     * @private
+     */
+    onFocus: PropTypes.func,
+    /**
+     * @private
+     */
+    onMouseOut: PropTypes.func,
+    /**
+     * @private
+     */
+    onMouseOver: PropTypes.func,
 };
 
 
@@ -55,42 +106,37 @@ const defaultProps = {
     defaultOverlayShown: false,
 };
 
-const PLACECLASS = {
-    right: 'right',
-    top: 'top',
-    bottom: 'bottom',
-    left: 'left',
-    rightTop: 'right-top',
-    rightBottom: 'right-bottom',
-    leftTop: 'left-top',
-    leftBottom: 'left-bottom',
-    topRight: 'top-right',
-    topLeft: 'top-left',
-    bottomLeft: 'bottom-left',
-    bottomRight: 'bottom-right'
-};
-
 class Popover extends Component{
     constructor(props, context) {
         super(props, context);
-
-        this.handleToggle = this.handleToggle.bind(this);
-        this.handleHide = this.handleHide.bind(this);
-        this.makeOverlay = this.makeOverlay.bind(this);
-        this.handleClose = this.handleClose.bind(this);
-        this.handleCancel = this.handleCancel.bind(this);
-
 
         this._mountNode = null;
 
         this.state = {
             show: props.defaultOverlayShown,
         };
+
+        this.handleMouseOver = e => (
+            this.handleMouseOverOut(this.handleDelayedShow, e)
+        );
+        this.handleMouseOut = e => (
+            this.handleMouseOverOut(this.handleDelayedHide, e)
+        );
     }
 
     componentDidMount() {
         this._mountNode = document.createElement('div');
         !isReact16 && this.renderOverlay();
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.hasOwnProperty('show')){
+            if(nextProps.show){
+                this.handleToggle();
+            }else{
+                this.handleHide();
+            }
+        }
     }
 
     componentDidUpdate() {
@@ -103,37 +149,92 @@ class Popover extends Component{
 
     }
 
-    handleToggle() {
+    handleToggle = () => {
 
         if (!this.state.show) {
             this.show();
+        }else{
+            this.hide();
         }
     }
 
-    handleClose () {
-        const { onClose } = this.props;
-        this.hide();
-        onClose && onClose();
-    }
-    handleCancel () {
-        const { onCancel } = this.props;
-        this.hide();
-        onCancel && onCancel();
+    handleDelayedShow = () => {
+        if (this._hoverHideDelay != null) {
+            clearTimeout(this._hoverHideDelay);
+            this._hoverHideDelay = null;
+            return;
+        }
+
+        if (this.state.show || this._hoverShowDelay != null) {
+            return;
+        }
+
+        const delay = this.props.delayShow != null ?
+            this.props.delayShow : this.props.delay;
+
+        if (!delay) {
+            this.show();
+            return;
+        }
+
+        this._hoverShowDelay = setTimeout(() => {
+            this._hoverShowDelay = null;
+            this.show();
+        }, delay);
     }
 
-    handleHide() {
+    handleDelayedHide = () => {
+        if (this._hoverShowDelay != null) {
+            clearTimeout(this._hoverShowDelay);
+            this._hoverShowDelay = null;
+            return;
+        }
+
+        if (!this.state.show || this._hoverHideDelay != null) {
+            return;
+        }
+
+        const delay = this.props.delayHide != null ?
+            this.props.delayHide : this.props.delay;
+
+        if (!delay) {
+            this.hide();
+            return;
+        }
+
+        this._hoverHideDelay = setTimeout(() => {
+            this._hoverHideDelay = null;
+            this.hide();
+        }, delay);
+    }
+
+    // 简单实现mouseEnter和mouseLeave。
+    // React的内置版本是有问题的：https://github.com/facebook/react/issues/4251
+    //在触发器被禁用的情况下，mouseOut / Over可能导致闪烁
+    //从一个子元素移动到另一个子元素。
+    handleMouseOverOut = (handler, e) => {
+        const target = e.currentTarget;
+        const related = e.relatedTarget || e.nativeEvent.toElement;
+
+        if (!related || related !== target && !contains(target, related)) {
+            handler(e);
+        }
+    }
+
+
+    handleHide = () => {
         this.hide();
     }
 
-    show() {
+    show = () => {
         this.setState({ show: true });
     }
 
-    hide() {
+    hide = () => {
         this.setState({ show: false });
     }
 
-    makeOverlay(overlay, props) {
+    makeOverlay = (overlay, props) => {
         return (
             <Overlay
                 {...props}
@@ -146,7 +247,7 @@ class Popover extends Component{
         );
     }
 
-    renderOverlay() {
+    renderOverlay = () => {
         ReactDOM.unstable_renderSubtreeIntoContainer(
             this, this._overlay, this._mountNode
         );
@@ -157,9 +258,17 @@ class Popover extends Component{
             content,
             children,
             onClick,
+            trigger,
+            onBlur,
+            onFocus,
+            onMouseOut,
+            onMouseOver,
             ...props
         } = this.props;
 
+        delete props.delay;
+        delete props.delayShow;
+        delete props.delayHide;
         delete props.defaultOverlayShown;
 
         const [overlayProps, confirmProps] = splitComponentProps(props, Overlay);
@@ -181,9 +290,30 @@ class Popover extends Component{
 
         triggerProps.onClick = createChainedFunction(childProps.onClick, onClick);
 
-        triggerProps.onClick = createChainedFunction(
-            triggerProps.onClick, this.handleToggle
-        );
+        if (isOneOf('click', trigger)) {
+            triggerProps.onClick = createChainedFunction(
+                triggerProps.onClick, this.handleToggle
+            );
+        }
+
+        if (isOneOf('hover', trigger)) {
+
+            triggerProps.onMouseOver = createChainedFunction(
+                childProps.onMouseOver, onMouseOver, this.handleMouseOver
+            );
+            triggerProps.onMouseOut = createChainedFunction(
+                childProps.onMouseOut, onMouseOut, this.handleMouseOut
+            );
+        }
+
+        if (isOneOf('focus', trigger)) {
+            triggerProps.onFocus = createChainedFunction(
+                childProps.onFocus, onFocus, this.handleDelayedShow
+            );
+            triggerProps.onBlur = createChainedFunction(
+                childProps.onBlur, onBlur, this.handleDelayedHide
+            );
+        }
 
 
         this._overlay = this.makeOverlay(overlay, overlayProps);

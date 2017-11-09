@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Popconfirm = require('./Popconfirm');
+var _Popover = require('./Popover');
 
-var _Popconfirm2 = _interopRequireDefault(_Popconfirm);
+var _Popover2 = _interopRequireDefault(_Popover);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-exports["default"] = _Popconfirm2["default"];
+exports["default"] = _Popover2["default"];
 module.exports = exports['default'];

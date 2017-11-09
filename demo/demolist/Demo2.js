@@ -1,7 +1,7 @@
 /**
  *
- * @title 气泡卡片默认样式
- * @description 支持12个位置
+ * @title 受控制的气泡卡片
+ * @description 通过设置show，来控制气泡卡片的显示和隐藏
  */
 
 import {Component} from 'react';
@@ -23,6 +23,12 @@ export default class Demo2 extends Component {
         })
     }
 
+    show = () => {
+        this.setState({
+            show: true
+        })
+    }
+
     render() {
         let content = (
             <div>
@@ -41,12 +47,13 @@ export default class Demo2 extends Component {
             <div>
                 <Popover
                     placement="right"
-                    overlay={content}
-                    trigger="click"
+                    content={content}
                     show={this.state.show}
+                    id="demo2"
                 >
                     <Button
                         colors="primary"
+                        onClick={ this.show }
                         >确认按钮</Button>
                 </Popover>
             </div>

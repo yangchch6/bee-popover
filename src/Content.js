@@ -49,8 +49,7 @@ const propTypes = {
 
 const defaultProps = {
     placement: 'right',
-    clsPrefix: 'u-popover',
-    rootClose: true
+    clsPrefix: 'u-popover'
 };
 
 const PLACECLASS = {
@@ -81,6 +80,7 @@ class Content extends React.Component {
             style,
             id,
             children,
+            trigger,
             ...others
         } = this.props;
 

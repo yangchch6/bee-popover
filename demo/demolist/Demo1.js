@@ -30,7 +30,8 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="leftTop"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
+                    id="leftTop"
                 >
                     <Button
                         colors="primary"
@@ -44,6 +45,7 @@ export default class Demo1 extends Component {
                     placement="left"
                     content={content}
                     trigger="click"
+                    id="left"
                 >
                     <Button
                         colors="primary"
@@ -58,6 +60,7 @@ export default class Demo1 extends Component {
                     placement="leftBottom"
                     content={content}
                     trigger="click"
+                    id="leftBottom"
                 >
                     <Button
                         colors="primary"
@@ -71,6 +74,7 @@ export default class Demo1 extends Component {
                     placement="topLeft"
                     content={content}
                     trigger="click"
+                    id="topLeft"
                 >
                     <Button
                         colors="primary"
@@ -85,6 +89,7 @@ export default class Demo1 extends Component {
                     placement="top"
                     content={content}
                     trigger="click"
+                    id="top"
                 >
                     <Button
                         colors="primary"
@@ -99,6 +104,7 @@ export default class Demo1 extends Component {
                     placement="topRight"
                     content={content}
                     trigger="click"
+                    id="topRight"
                 >
                     <Button
                         colors="primary"
@@ -114,6 +120,7 @@ export default class Demo1 extends Component {
                     placement="rightTop"
                     content={content}
                     trigger="click"
+                    id="rightTop"
                 >
                     <Button
                         colors="primary"
@@ -128,6 +135,7 @@ export default class Demo1 extends Component {
                     placement="right"
                     content={content}
                     trigger="click"
+                    id="right"
                 >
                     <Button
                         colors="primary"
@@ -141,6 +149,7 @@ export default class Demo1 extends Component {
                     placement="rightBottom"
                     content={content}
                     trigger="click"
+                    id="rightBottom"
                 >
                     <Button
                         colors="primary"
@@ -154,6 +163,7 @@ export default class Demo1 extends Component {
                     placement="bottomLeft"
                     content={content}
                     trigger="click"
+                    id="bottomLeft"
                 >
                     <Button
                         colors="primary"
@@ -167,6 +177,7 @@ export default class Demo1 extends Component {
                     placement="bottom"
                     content={content}
                     trigger="click"
+                    id="bottom"
                 >
                     <Button
                         colors="primary"
@@ -180,6 +191,7 @@ export default class Demo1 extends Component {
                     placement="bottomRight"
                     content={content}
                     trigger="click"
+                    id="bottomRight"
                 >
                     <Button
                         colors="primary"
