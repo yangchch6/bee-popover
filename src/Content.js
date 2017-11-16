@@ -2,7 +2,6 @@ import React from 'react';
 import isRequiredForA11y from 'tinper-bee-core/lib/isRequiredForA11y';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import OverlayTrigger from 'bee-overlay/build/OverlayTrigger';
 
 
 const propTypes = {
