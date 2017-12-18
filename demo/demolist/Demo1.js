@@ -44,7 +44,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="left"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="left"
                 >
                     <Button
@@ -59,7 +59,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="leftBottom"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="leftBottom"
                 >
                     <Button
@@ -73,7 +73,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="topLeft"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="topLeft"
                 >
                     <Button
@@ -88,7 +88,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="top"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="top"
                 >
                     <Button
@@ -103,7 +103,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="topRight"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="topRight"
                 >
                     <Button
@@ -119,7 +119,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="rightTop"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="rightTop"
                 >
                     <Button
@@ -134,7 +134,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="right"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="right"
                 >
                     <Button
@@ -148,7 +148,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="rightBottom"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="rightBottom"
                 >
                     <Button
@@ -162,7 +162,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="bottomLeft"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="bottomLeft"
                 >
                     <Button
@@ -176,7 +176,7 @@ export default class Demo1 extends Component {
                 <Popover
                     placement="bottom"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="bottom"
                 >
                     <Button
@@ -185,12 +185,12 @@ export default class Demo1 extends Component {
                             position: 'absolute',
                             top: 115,
                             left: 200
-                        }}>上</Button>
+                        }}>下</Button>
                 </Popover>
                 <Popover
                     placement="bottomRight"
                     content={content}
-                    trigger="click"
+                    trigger="hover"
                     id="bottomRight"
                 >
                     <Button
