@@ -9,7 +9,7 @@ import Popover from '../../src';
 import Button from 'bee-button';
 
 
-export default class Demo2 extends Component {
+class Demo2 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -60,3 +60,5 @@ export default class Demo2 extends Component {
         )
     }
 }
+export default Demo2;
+

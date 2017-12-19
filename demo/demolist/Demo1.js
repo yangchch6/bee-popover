@@ -9,7 +9,7 @@ import Popover from '../../src';
 import Button from 'bee-button';
 
 
-export default class Demo1 extends Component {
+ class Demo1 extends Component {
     constructor(props) {
         super(props);
     }
@@ -205,3 +205,5 @@ export default class Demo1 extends Component {
         )
     }
 }
+
+export default Demo1;
