@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c496ed17-8e6f-4cf4-b839-c7e7135574b4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/demolist/Demo1.js" afterPath="$PROJECT_DIR$/demo/demolist/Demo1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/demolist/Demo2.js" afterPath="$PROJECT_DIR$/demo/demolist/Demo2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -243,7 +242,7 @@
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bee-checkbox" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
@@ -343,12 +342,12 @@
       <workItem from="1509933439227" duration="270000" />
       <workItem from="1510120971190" duration="15368000" />
       <workItem from="1510205658554" duration="1319000" />
-      <workItem from="1513664177943" duration="28000" />
+      <workItem from="1513664177943" duration="133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29344000" />
+    <option name="totallyTimeSpent" value="29449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="0" />
