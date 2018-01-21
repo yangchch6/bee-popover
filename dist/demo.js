@@ -50,6 +50,10 @@
 	
 	var _beePanel = __webpack_require__(8);
 	
+	var _beeButton = __webpack_require__(82);
+	
+	var _beeButton2 = _interopRequireDefault(_beeButton);
+	
 	var _react = __webpack_require__(4);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -57,10 +61,6 @@
 	var _reactDom = __webpack_require__(12);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	var _beeButton = __webpack_require__(103);
-	
-	var _beeButton2 = _interopRequireDefault(_beeButton);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -72,11 +72,11 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
 	
-	var CARET = _react2['default'].createElement('i', { className: 'uf uf-chevronarrowdown' });
+	var CARET = _react2['default'].createElement('i', { className: 'uf uf-arrow-down' });
 	
-	var CARETUP = _react2['default'].createElement('i', { className: 'uf uf-chevronarrowup' });
+	var CARETUP = _react2['default'].createElement('i', { className: 'uf uf-arrow-up' });
 	
-	var Demo1 = __webpack_require__(105);var Demo2 = __webpack_require__(129);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 气泡卡片默认样式", "code": "/**\n *\n * @title 气泡卡片默认样式\n * @description 支持12个位置\n */\n\nimport {Component} from 'react';\nimport Popover from 'bee-popover';\nimport Button from 'bee-button';\n\n\n class Demo1 extends Component {\n    constructor(props) {\n        super(props);\n    }\n\n    render() {\n        let content = (\n            <div>\n                <h3>消息</h3>\n                <ul>\n                    <li>您的服务器已宕机，请处理。</li>\n                    <li>您的手机已停机，请续费。</li>\n                    <li>你的工资已到账，请查收。</li>\n                </ul>\n            </div>\n        )\n        return (\n            <div style={{position: 'relative', height: 320, marginTop: 100, marginLeft: 250}}>\n                <Popover\n                    placement=\"leftTop\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"leftTop\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 5,\n                            left: 0\n                        }}>左上</Button>\n                </Popover>\n                <Popover\n                    placement=\"left\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"left\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 55,\n                            left: 0\n                        }}>左\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"leftBottom\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"leftBottom\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 110,\n                            left: 0\n                        }}>左下</Button>\n                </Popover>\n                <Popover\n                    placement=\"topLeft\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"topLeft\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 0,\n                            left: 100\n                        }}>上左\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"top\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"top\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 0,\n                            left: 200\n                        }}>上\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"topRight\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"topRight\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 0,\n                            left: 300\n                        }}>\n                        上右\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"rightTop\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"rightTop\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 5,\n                            left: 400\n                        }}>右上\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"right\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"right\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 55,\n                            left: 400\n                        }}>右</Button>\n                </Popover>\n                <Popover\n                    placement=\"rightBottom\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"rightBottom\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 110,\n                            left: 400\n                        }}>右下</Button>\n                </Popover>\n                <Popover\n                    placement=\"bottomLeft\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"bottomLeft\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 115,\n                            left: 100\n                        }}>下左</Button>\n                </Popover>\n                <Popover\n                    placement=\"bottom\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"bottom\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 115,\n                            left: 200\n                        }}>下</Button>\n                </Popover>\n                <Popover\n                    placement=\"bottomRight\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"bottomRight\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 115,\n                            left: 300\n                        }}>下右</Button>\n                </Popover>\n            </div>\n        )\n    }\n}\n\n", "desc": " 支持12个位置" }, { "example": _react2['default'].createElement(Demo2, null), "title": " 受控制的气泡卡片", "code": "/**\r\n *\r\n * @title 受控制的气泡卡片\r\n * @description 通过设置show，来控制气泡卡片的显示和隐藏\r\n */\r\n\r\nimport {Component} from 'react';\r\nimport Popover from 'bee-popover';\r\nimport Button from 'bee-button';\r\n\r\n\r\nclass Demo2 extends Component {\r\n    constructor(props) {\r\n        super(props);\r\n        this.state = {\r\n            show: false\r\n        }\r\n    }\r\n\r\n    handleClose = () => {\r\n        this.setState({\r\n            show: false\r\n        })\r\n    }\r\n\r\n    show = () => {\r\n        this.setState({\r\n            show: true\r\n        })\r\n    }\r\n\r\n    render() {\r\n        let content = (\r\n            <div>\r\n                <p>请确认您的包裹已签收！</p>\r\n                <div>\r\n                    <Button\r\n                        colors=\"primary\"\r\n                        onClick={ this.handleClose }\r\n                        size=\"sm\">\r\n                        关闭\r\n                    </Button>\r\n                </div>\r\n            </div>\r\n        )\r\n        return (\r\n            <div>\r\n                <Popover\r\n                    placement=\"right\"\r\n                    content={content}\r\n                    show={this.state.show}\r\n                    id=\"demo2\"\r\n                >\r\n                    <Button\r\n                        colors=\"primary\"\r\n                        onClick={ this.show }\r\n                        >确认按钮</Button>\r\n                </Popover>\r\n            </div>\r\n        )\r\n    }\r\n}\r\n\r\n\r\n", "desc": " 通过设置show，来控制气泡卡片的显示和隐藏" }];
+	var Demo1 = __webpack_require__(84);var Demo2 = __webpack_require__(108);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 气泡卡片默认样式", "code": "/**\n *\n * @title 气泡卡片默认样式\n * @description 支持12个位置\n */\n\nimport {Component} from 'react';\nimport { Popover, Button } from 'tinper-bee';\n\n\n class Demo1 extends Component {\n    constructor(props) {\n        super(props);\n    }\n\n    render() {\n        let content = (\n            <div>\n                <h3>消息</h3>\n                <ul>\n                    <li>您的服务器已宕机，请处理。</li>\n                    <li>您的手机已停机，请续费。</li>\n                    <li>你的工资已到账，请查收。</li>\n                </ul>\n            </div>\n        )\n        return (\n            <div style={{position: 'relative', height: 320, marginTop: 100, marginLeft: 250}}>\n                <Popover\n                    placement=\"leftTop\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"leftTop\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 5,\n                            left: 0\n                        }}>左上</Button>\n                </Popover>\n                <Popover\n                    placement=\"left\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"left\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 55,\n                            left: 0\n                        }}>左\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"leftBottom\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"leftBottom\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 110,\n                            left: 0\n                        }}>左下</Button>\n                </Popover>\n                <Popover\n                    placement=\"topLeft\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"topLeft\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 0,\n                            left: 100\n                        }}>上左\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"top\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"top\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 0,\n                            left: 200\n                        }}>上\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"topRight\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"topRight\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 0,\n                            left: 300\n                        }}>\n                        上右\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"rightTop\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"rightTop\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 5,\n                            left: 400\n                        }}>右上\n                    </Button>\n                </Popover>\n                <Popover\n                    placement=\"right\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"right\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 55,\n                            left: 400\n                        }}>右</Button>\n                </Popover>\n                <Popover\n                    placement=\"rightBottom\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"rightBottom\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 110,\n                            left: 400\n                        }}>右下</Button>\n                </Popover>\n                <Popover\n                    placement=\"bottomLeft\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"bottomLeft\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 115,\n                            left: 100\n                        }}>下左</Button>\n                </Popover>\n                <Popover\n                    placement=\"bottom\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"bottom\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 115,\n                            left: 200\n                        }}>下</Button>\n                </Popover>\n                <Popover\n                    placement=\"bottomRight\"\n                    content={content}\n                    trigger=\"hover\"\n                    id=\"bottomRight\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        style={{\n                            position: 'absolute',\n                            top: 115,\n                            left: 300\n                        }}>下右</Button>\n                </Popover>\n            </div>\n        )\n    }\n}\n\n", "desc": " 支持12个位置", "scss_code": ".demoPadding{\n  button{\n    margin: 10px;\n  }\n}\n\nul,li{\n  list-style: none;\n}" }, { "example": _react2['default'].createElement(Demo2, null), "title": " 受控制的气泡卡片", "code": "/**\n *\n * @title 受控制的气泡卡片\n * @description 通过设置show，来控制气泡卡片的显示和隐藏\n */\n\nimport {Component} from 'react';\nimport { Popover, Button } from 'tinper-bee';\n\n\nclass Demo2 extends Component {\n    constructor(props) {\n        super(props);\n        this.state = {\n            show: false\n        }\n    }\n\n    handleClose = () => {\n        this.setState({\n            show: false\n        })\n    }\n\n    show = () => {\n        this.setState({\n            show: true\n        })\n    }\n\n    render() {\n        let content = (\n            <div>\n                <p>请确认您的包裹已签收！</p>\n                <div>\n                    <Button\n                        colors=\"primary\"\n                        onClick={ this.handleClose }\n                        size=\"sm\">\n                        关闭\n                    </Button>\n                </div>\n            </div>\n        )\n        return (\n            <div>\n                <Popover\n                    placement=\"right\"\n                    content={content}\n                    show={this.state.show}\n                    id=\"demo2\"\n                >\n                    <Button\n                        colors=\"primary\"\n                        onClick={ this.show }\n                        >确认按钮</Button>\n                </Popover>\n            </div>\n        )\n    }\n}\n\n\n", "desc": " 通过设置show，来控制气泡卡片的显示和隐藏", "scss_code": ".demoPadding{\n  button{\n    margin: 10px;\n  }\n}\n\nul,li{\n  list-style: none;\n}" }];
 	
 	var Demo = function (_Component) {
 	    _inherits(Demo, _Component);
@@ -102,18 +102,23 @@
 	            title = _props.title,
 	            example = _props.example,
 	            code = _props.code,
-	            desc = _props.desc;
+	            desc = _props.desc,
+	            scss_code = _props.scss_code;
 	
 	        var caret = this.state.open ? CARETUP : CARET;
 	        var text = this.state.open ? "隐藏代码" : "查看代码";
 	
-	        var footer = _react2['default'].createElement(
-	            _beeButton2['default'],
-	            { shape: 'block', onClick: this.handleClick },
-	            caret,
-	            text
+	        var header = _react2['default'].createElement(
+	            'div',
+	            null,
+	            example,
+	            _react2['default'].createElement(
+	                _beeButton2['default'],
+	                { style: { "marginTop": "10px" }, shape: 'block', onClick: this.handleClick },
+	                caret,
+	                text
+	            )
 	        );
-	
 	        return _react2['default'].createElement(
 	            _beeLayout.Col,
 	            { md: 12 },
@@ -129,7 +134,7 @@
 	            ),
 	            _react2['default'].createElement(
 	                _beePanel.Panel,
-	                { collapsible: true, headerContent: true, expanded: this.state.open, colors: 'bordered', header: example, footer: footer, footerStyle: { padding: 0, borderColor: "transparent" } },
+	                { collapsible: true, headerContent: true, expanded: this.state.open, colors: 'bordered', header: header, footerStyle: { padding: 0 } },
 	                _react2['default'].createElement(
 	                    'pre',
 	                    null,
@@ -138,7 +143,16 @@
 	                        { className: 'hljs javascript' },
 	                        code
 	                    )
-	                )
+	                ),
+	                !!scss_code ? _react2['default'].createElement(
+	                    'pre',
+	                    null,
+	                    _react2['default'].createElement(
+	                        'code',
+	                        { className: 'hljs css' },
+	                        scss_code
+	                    )
+	                ) : null
 	            )
 	        );
 	    };
@@ -161,7 +175,7 @@
 	            null,
 	            DemoArray.map(function (child, index) {
 	
-	                return _react2['default'].createElement(Demo, { example: child.example, title: child.title, code: child.code, desc: child.desc, key: index });
+	                return _react2['default'].createElement(Demo, { example: child.example, title: child.title, code: child.code, scss_code: child.scss_code, desc: child.desc, key: index });
 	            })
 	        );
 	    };
@@ -625,7 +639,7 @@
 	
 	var _Panel3 = _interopRequireDefault(_Panel2);
 	
-	var _PanelGroup2 = __webpack_require__(102);
+	var _PanelGroup2 = __webpack_require__(81);
 	
 	var _PanelGroup3 = _interopRequireDefault(_PanelGroup2);
 	
@@ -947,7 +961,7 @@
 	
 	var _Collapse3 = _interopRequireDefault(_Collapse2);
 	
-	var _Fade2 = __webpack_require__(101);
+	var _Fade2 = __webpack_require__(80);
 	
 	var _Fade3 = _interopRequireDefault(_Fade2);
 	
@@ -2027,31 +2041,31 @@
 	
 	var _splitComponent3 = _interopRequireDefault(_splitComponent2);
 	
-	var _createChainedFunction2 = __webpack_require__(71);
+	var _createChainedFunction2 = __webpack_require__(50);
 	
 	var _createChainedFunction3 = _interopRequireDefault(_createChainedFunction2);
 	
-	var _keyCode = __webpack_require__(72);
+	var _keyCode = __webpack_require__(51);
 	
 	var _keyCode2 = _interopRequireDefault(_keyCode);
 	
-	var _contains2 = __webpack_require__(73);
+	var _contains2 = __webpack_require__(52);
 	
 	var _contains3 = _interopRequireDefault(_contains2);
 	
-	var _addEventListener2 = __webpack_require__(74);
+	var _addEventListener2 = __webpack_require__(53);
 	
 	var _addEventListener3 = _interopRequireDefault(_addEventListener2);
 	
-	var _cssAnimation2 = __webpack_require__(79);
+	var _cssAnimation2 = __webpack_require__(58);
 	
 	var _cssAnimation3 = _interopRequireDefault(_cssAnimation2);
 	
-	var _toArray2 = __webpack_require__(83);
+	var _toArray2 = __webpack_require__(62);
 	
 	var _toArray3 = _interopRequireDefault(_toArray2);
 	
-	var _Align2 = __webpack_require__(84);
+	var _Align2 = __webpack_require__(63);
 	
 	var _Align3 = _interopRequireDefault(_Align2);
 	
@@ -2619,48 +2633,44 @@
 	__webpack_require__(38);
 	module.exports = __webpack_require__(41).Object.entries;
 
-
 /***/ }),
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	// https://github.com/tc39/proposal-object-values-entries
-	var $export = __webpack_require__(39);
-	var $entries = __webpack_require__(54)(true);
+	// http://goo.gl/XkBrjD
+	var $export  = __webpack_require__(39)
+	  , $entries = __webpack_require__(44)(true);
 	
 	$export($export.S, 'Object', {
-	  entries: function entries(it) {
+	  entries: function entries(it){
 	    return $entries(it);
 	  }
 	});
-
 
 /***/ }),
 /* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var global = __webpack_require__(40);
-	var core = __webpack_require__(41);
-	var ctx = __webpack_require__(42);
-	var hide = __webpack_require__(44);
-	var PROTOTYPE = 'prototype';
+	var global    = __webpack_require__(40)
+	  , core      = __webpack_require__(41)
+	  , ctx       = __webpack_require__(42)
+	  , PROTOTYPE = 'prototype';
 	
-	var $export = function (type, name, source) {
-	  var IS_FORCED = type & $export.F;
-	  var IS_GLOBAL = type & $export.G;
-	  var IS_STATIC = type & $export.S;
-	  var IS_PROTO = type & $export.P;
-	  var IS_BIND = type & $export.B;
-	  var IS_WRAP = type & $export.W;
-	  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
-	  var expProto = exports[PROTOTYPE];
-	  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE];
-	  var key, own, out;
-	  if (IS_GLOBAL) source = name;
-	  for (key in source) {
+	var $export = function(type, name, source){
+	  var IS_FORCED = type & $export.F
+	    , IS_GLOBAL = type & $export.G
+	    , IS_STATIC = type & $export.S
+	    , IS_PROTO  = type & $export.P
+	    , IS_BIND   = type & $export.B
+	    , IS_WRAP   = type & $export.W
+	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
+	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
+	    , key, own, out;
+	  if(IS_GLOBAL)source = name;
+	  for(key in source){
 	    // contains in native
-	    own = !IS_FORCED && target && target[key] !== undefined;
-	    if (own && key in exports) continue;
+	    own = !IS_FORCED && target && key in target;
+	    if(own && key in exports)continue;
 	    // export native or passed
 	    out = own ? target[key] : source[key];
 	    // prevent global pollution for namespaces
@@ -2668,39 +2678,25 @@
 	    // bind timers to global for call from export context
 	    : IS_BIND && own ? ctx(out, global)
 	    // wrap global constructors for prevent change them in library
-	    : IS_WRAP && target[key] == out ? (function (C) {
-	      var F = function (a, b, c) {
-	        if (this instanceof C) {
-	          switch (arguments.length) {
-	            case 0: return new C();
-	            case 1: return new C(a);
-	            case 2: return new C(a, b);
-	          } return new C(a, b, c);
-	        } return C.apply(this, arguments);
+	    : IS_WRAP && target[key] == out ? (function(C){
+	      var F = function(param){
+	        return this instanceof C ? new C(param) : C(param);
 	      };
 	      F[PROTOTYPE] = C[PROTOTYPE];
 	      return F;
 	    // make static versions for prototype methods
 	    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
-	    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
-	    if (IS_PROTO) {
-	      (exports.virtual || (exports.virtual = {}))[key] = out;
-	      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
-	      if (type & $export.R && expProto && !expProto[key]) hide(expProto, key, out);
-	    }
+	    if(IS_PROTO)(exports[PROTOTYPE] || (exports[PROTOTYPE] = {}))[key] = out;
 	  }
 	};
 	// type bitmap
-	$export.F = 1;   // forced
-	$export.G = 2;   // global
-	$export.S = 4;   // static
-	$export.P = 8;   // proto
-	$export.B = 16;  // bind
-	$export.W = 32;  // wrap
-	$export.U = 64;  // safe
-	$export.R = 128; // real proto method for `library`
+	$export.F = 1;  // forced
+	$export.G = 2;  // global
+	$export.S = 4;  // static
+	$export.P = 8;  // proto
+	$export.B = 16; // bind
+	$export.W = 32; // wrap
 	module.exports = $export;
-
 
 /***/ }),
 /* 40 */
@@ -2708,19 +2704,15 @@
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
 	var global = module.exports = typeof window != 'undefined' && window.Math == Math
-	  ? window : typeof self != 'undefined' && self.Math == Math ? self
-	  // eslint-disable-next-line no-new-func
-	  : Function('return this')();
-	if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
-
+	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 /***/ }),
 /* 41 */
 /***/ (function(module, exports) {
 
-	var core = module.exports = { version: '2.5.1' };
-	if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
-
+	var core = module.exports = {version: '1.2.6'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ }),
 /* 42 */
@@ -2728,402 +2720,116 @@
 
 	// optional / simple context binding
 	var aFunction = __webpack_require__(43);
-	module.exports = function (fn, that, length) {
+	module.exports = function(fn, that, length){
 	  aFunction(fn);
-	  if (that === undefined) return fn;
-	  switch (length) {
-	    case 1: return function (a) {
+	  if(that === undefined)return fn;
+	  switch(length){
+	    case 1: return function(a){
 	      return fn.call(that, a);
 	    };
-	    case 2: return function (a, b) {
+	    case 2: return function(a, b){
 	      return fn.call(that, a, b);
 	    };
-	    case 3: return function (a, b, c) {
+	    case 3: return function(a, b, c){
 	      return fn.call(that, a, b, c);
 	    };
 	  }
-	  return function (/* ...args */) {
+	  return function(/* ...args */){
 	    return fn.apply(that, arguments);
 	  };
 	};
-
 
 /***/ }),
 /* 43 */
 /***/ (function(module, exports) {
 
-	module.exports = function (it) {
-	  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+	module.exports = function(it){
+	  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
 	  return it;
 	};
-
 
 /***/ }),
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var dP = __webpack_require__(45);
-	var createDesc = __webpack_require__(53);
-	module.exports = __webpack_require__(49) ? function (object, key, value) {
-	  return dP.f(object, key, createDesc(1, value));
-	} : function (object, key, value) {
-	  object[key] = value;
-	  return object;
-	};
-
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var anObject = __webpack_require__(46);
-	var IE8_DOM_DEFINE = __webpack_require__(48);
-	var toPrimitive = __webpack_require__(52);
-	var dP = Object.defineProperty;
-	
-	exports.f = __webpack_require__(49) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
-	  anObject(O);
-	  P = toPrimitive(P, true);
-	  anObject(Attributes);
-	  if (IE8_DOM_DEFINE) try {
-	    return dP(O, P, Attributes);
-	  } catch (e) { /* empty */ }
-	  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
-	  if ('value' in Attributes) O[P] = Attributes.value;
-	  return O;
-	};
-
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var isObject = __webpack_require__(47);
-	module.exports = function (it) {
-	  if (!isObject(it)) throw TypeError(it + ' is not an object!');
-	  return it;
-	};
-
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports) {
-
-	module.exports = function (it) {
-	  return typeof it === 'object' ? it !== null : typeof it === 'function';
-	};
-
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	module.exports = !__webpack_require__(49) && !__webpack_require__(50)(function () {
-	  return Object.defineProperty(__webpack_require__(51)('div'), 'a', { get: function () { return 7; } }).a != 7;
-	});
-
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// Thank's IE8 for his funny defineProperty
-	module.exports = !__webpack_require__(50)(function () {
-	  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
-	});
-
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports) {
-
-	module.exports = function (exec) {
-	  try {
-	    return !!exec();
-	  } catch (e) {
-	    return true;
-	  }
-	};
-
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var isObject = __webpack_require__(47);
-	var document = __webpack_require__(40).document;
-	// typeof document.createElement is 'object' in old IE
-	var is = isObject(document) && isObject(document.createElement);
-	module.exports = function (it) {
-	  return is ? document.createElement(it) : {};
-	};
-
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// 7.1.1 ToPrimitive(input [, PreferredType])
-	var isObject = __webpack_require__(47);
-	// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-	// and the second argument - flag - preferred type is a string
-	module.exports = function (it, S) {
-	  if (!isObject(it)) return it;
-	  var fn, val;
-	  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
-	  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
-	  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
-	  throw TypeError("Can't convert object to primitive value");
-	};
-
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports) {
-
-	module.exports = function (bitmap, value) {
-	  return {
-	    enumerable: !(bitmap & 1),
-	    configurable: !(bitmap & 2),
-	    writable: !(bitmap & 4),
-	    value: value
-	  };
-	};
-
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var getKeys = __webpack_require__(55);
-	var toIObject = __webpack_require__(58);
-	var isEnum = __webpack_require__(70).f;
-	module.exports = function (isEntries) {
-	  return function (it) {
-	    var O = toIObject(it);
-	    var keys = getKeys(O);
-	    var length = keys.length;
-	    var i = 0;
-	    var result = [];
-	    var key;
-	    while (length > i) if (isEnum.call(O, key = keys[i++])) {
+	var $         = __webpack_require__(45)
+	  , toIObject = __webpack_require__(46)
+	  , isEnum    = $.isEnum;
+	module.exports = function(isEntries){
+	  return function(it){
+	    var O      = toIObject(it)
+	      , keys   = $.getKeys(O)
+	      , length = keys.length
+	      , i      = 0
+	      , result = []
+	      , key;
+	    while(length > i)if(isEnum.call(O, key = keys[i++])){
 	      result.push(isEntries ? [key, O[key]] : O[key]);
 	    } return result;
 	  };
 	};
 
-
 /***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	var $keys = __webpack_require__(56);
-	var enumBugKeys = __webpack_require__(69);
-	
-	module.exports = Object.keys || function keys(O) {
-	  return $keys(O, enumBugKeys);
-	};
-
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var has = __webpack_require__(57);
-	var toIObject = __webpack_require__(58);
-	var arrayIndexOf = __webpack_require__(62)(false);
-	var IE_PROTO = __webpack_require__(66)('IE_PROTO');
-	
-	module.exports = function (object, names) {
-	  var O = toIObject(object);
-	  var i = 0;
-	  var result = [];
-	  var key;
-	  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
-	  // Don't enum bug & hidden keys
-	  while (names.length > i) if (has(O, key = names[i++])) {
-	    ~arrayIndexOf(result, key) || result.push(key);
-	  }
-	  return result;
-	};
-
-
-/***/ }),
-/* 57 */
+/* 45 */
 /***/ (function(module, exports) {
 
-	var hasOwnProperty = {}.hasOwnProperty;
-	module.exports = function (it, key) {
-	  return hasOwnProperty.call(it, key);
+	var $Object = Object;
+	module.exports = {
+	  create:     $Object.create,
+	  getProto:   $Object.getPrototypeOf,
+	  isEnum:     {}.propertyIsEnumerable,
+	  getDesc:    $Object.getOwnPropertyDescriptor,
+	  setDesc:    $Object.defineProperty,
+	  setDescs:   $Object.defineProperties,
+	  getKeys:    $Object.keys,
+	  getNames:   $Object.getOwnPropertyNames,
+	  getSymbols: $Object.getOwnPropertySymbols,
+	  each:       [].forEach
 	};
 
-
 /***/ }),
-/* 58 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(59);
-	var defined = __webpack_require__(61);
-	module.exports = function (it) {
+	var IObject = __webpack_require__(47)
+	  , defined = __webpack_require__(49);
+	module.exports = function(it){
 	  return IObject(defined(it));
 	};
 
-
 /***/ }),
-/* 59 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(60);
-	// eslint-disable-next-line no-prototype-builtins
-	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
+	var cof = __webpack_require__(48);
+	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
-
 /***/ }),
-/* 60 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	var toString = {}.toString;
 	
-	module.exports = function (it) {
+	module.exports = function(it){
 	  return toString.call(it).slice(8, -1);
 	};
 
-
 /***/ }),
-/* 61 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
-	module.exports = function (it) {
-	  if (it == undefined) throw TypeError("Can't call method on  " + it);
+	module.exports = function(it){
+	  if(it == undefined)throw TypeError("Can't call method on  " + it);
 	  return it;
 	};
 
-
 /***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// false -> Array#indexOf
-	// true  -> Array#includes
-	var toIObject = __webpack_require__(58);
-	var toLength = __webpack_require__(63);
-	var toAbsoluteIndex = __webpack_require__(65);
-	module.exports = function (IS_INCLUDES) {
-	  return function ($this, el, fromIndex) {
-	    var O = toIObject($this);
-	    var length = toLength(O.length);
-	    var index = toAbsoluteIndex(fromIndex, length);
-	    var value;
-	    // Array#includes uses SameValueZero equality algorithm
-	    // eslint-disable-next-line no-self-compare
-	    if (IS_INCLUDES && el != el) while (length > index) {
-	      value = O[index++];
-	      // eslint-disable-next-line no-self-compare
-	      if (value != value) return true;
-	    // Array#indexOf ignores holes, Array#includes - not
-	    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
-	      if (O[index] === el) return IS_INCLUDES || index || 0;
-	    } return !IS_INCLUDES && -1;
-	  };
-	};
-
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(64);
-	var min = Math.min;
-	module.exports = function (it) {
-	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-	};
-
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports) {
-
-	// 7.1.4 ToInteger
-	var ceil = Math.ceil;
-	var floor = Math.floor;
-	module.exports = function (it) {
-	  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
-	};
-
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(64);
-	var max = Math.max;
-	var min = Math.min;
-	module.exports = function (index, length) {
-	  index = toInteger(index);
-	  return index < 0 ? max(index + length, 0) : min(index, length);
-	};
-
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var shared = __webpack_require__(67)('keys');
-	var uid = __webpack_require__(68);
-	module.exports = function (key) {
-	  return shared[key] || (shared[key] = uid(key));
-	};
-
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var global = __webpack_require__(40);
-	var SHARED = '__core-js_shared__';
-	var store = global[SHARED] || (global[SHARED] = {});
-	module.exports = function (key) {
-	  return store[key] || (store[key] = {});
-	};
-
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports) {
-
-	var id = 0;
-	var px = Math.random();
-	module.exports = function (key) {
-	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
-	};
-
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports) {
-
-	// IE 8- don't enum bug keys
-	module.exports = (
-	  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
-	).split(',');
-
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports) {
-
-	exports.f = {}.propertyIsEnumerable;
-
-
-/***/ }),
-/* 71 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3158,7 +2864,7 @@
 	exports.default = createChainedFunction;
 
 /***/ }),
-/* 72 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3683,7 +3389,7 @@
 	module.exports = KeyCode;
 
 /***/ }),
-/* 73 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -3703,7 +3409,7 @@
 	}
 
 /***/ }),
-/* 74 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3711,7 +3417,7 @@
 	exports.__esModule = true;
 	exports.default = addEventListenerWrap;
 	
-	var _addDomEventListener = __webpack_require__(75);
+	var _addDomEventListener = __webpack_require__(54);
 	
 	var _addDomEventListener2 = _interopRequireDefault(_addDomEventListener);
 	
@@ -3730,7 +3436,7 @@
 	}
 
 /***/ }),
-/* 75 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3740,7 +3446,7 @@
 	});
 	exports["default"] = addEventListener;
 	
-	var _EventObject = __webpack_require__(76);
+	var _EventObject = __webpack_require__(55);
 	
 	var _EventObject2 = _interopRequireDefault(_EventObject);
 	
@@ -3771,7 +3477,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 76 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3780,11 +3486,11 @@
 	  value: true
 	});
 	
-	var _EventBaseObject = __webpack_require__(77);
+	var _EventBaseObject = __webpack_require__(56);
 	
 	var _EventBaseObject2 = _interopRequireDefault(_EventBaseObject);
 	
-	var _objectAssign = __webpack_require__(78);
+	var _objectAssign = __webpack_require__(57);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
@@ -4053,7 +3759,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 77 */
+/* 56 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -4118,7 +3824,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 78 */
+/* 57 */
 /***/ (function(module, exports) {
 
 	/*
@@ -4214,7 +3920,7 @@
 
 
 /***/ }),
-/* 79 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4223,11 +3929,11 @@
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
-	var _Event = __webpack_require__(80);
+	var _Event = __webpack_require__(59);
 	
 	var _Event2 = _interopRequireDefault(_Event);
 	
-	var _componentClasses = __webpack_require__(81);
+	var _componentClasses = __webpack_require__(60);
 	
 	var _componentClasses2 = _interopRequireDefault(_componentClasses);
 	
@@ -4406,7 +4112,7 @@
 	exports.default = cssAnimation;
 
 /***/ }),
-/* 80 */
+/* 59 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -4496,7 +4202,7 @@
 	exports.default = TransitionEvents;
 
 /***/ }),
-/* 81 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
@@ -4504,9 +4210,9 @@
 	 */
 	
 	try {
-	  var index = __webpack_require__(82);
+	  var index = __webpack_require__(61);
 	} catch (err) {
-	  var index = __webpack_require__(82);
+	  var index = __webpack_require__(61);
 	}
 	
 	/**
@@ -4693,7 +4399,7 @@
 
 
 /***/ }),
-/* 82 */
+/* 61 */
 /***/ (function(module, exports) {
 
 	module.exports = function(arr, obj){
@@ -4705,7 +4411,7 @@
 	};
 
 /***/ }),
-/* 83 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4728,7 +4434,7 @@
 	}
 
 /***/ }),
-/* 84 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4747,15 +4453,15 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _createReactClass = __webpack_require__(85);
+	var _createReactClass = __webpack_require__(64);
 	
 	var _createReactClass2 = _interopRequireDefault(_createReactClass);
 	
-	var _domAlign = __webpack_require__(91);
+	var _domAlign = __webpack_require__(70);
 	
 	var _domAlign2 = _interopRequireDefault(_domAlign);
 	
-	var _addEventListener = __webpack_require__(74);
+	var _addEventListener = __webpack_require__(53);
 	
 	var _addEventListener2 = _interopRequireDefault(_addEventListener);
 	
@@ -4926,7 +4632,7 @@
 	exports.default = Align;
 
 /***/ }),
-/* 85 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
@@ -4940,7 +4646,7 @@
 	'use strict';
 	
 	var React = __webpack_require__(4);
-	var factory = __webpack_require__(86);
+	var factory = __webpack_require__(65);
 	
 	if (typeof React === 'undefined') {
 	  throw Error(
@@ -4960,7 +4666,7 @@
 
 
 /***/ }),
-/* 86 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4973,13 +4679,13 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(78);
+	var _assign = __webpack_require__(57);
 	
-	var emptyObject = __webpack_require__(87);
-	var _invariant = __webpack_require__(88);
+	var emptyObject = __webpack_require__(66);
+	var _invariant = __webpack_require__(67);
 	
 	if (process.env.NODE_ENV !== 'production') {
-	  var warning = __webpack_require__(89);
+	  var warning = __webpack_require__(68);
 	}
 	
 	var MIXINS_KEY = 'mixins';
@@ -5837,7 +5543,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(32)))
 
 /***/ }),
-/* 87 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5860,7 +5566,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(32)))
 
 /***/ }),
-/* 88 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5919,7 +5625,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(32)))
 
 /***/ }),
-/* 89 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5932,7 +5638,7 @@
 	
 	'use strict';
 	
-	var emptyFunction = __webpack_require__(90);
+	var emptyFunction = __webpack_require__(69);
 	
 	/**
 	 * Similar to invariant but only logs a warning if the condition is not met.
@@ -5987,7 +5693,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(32)))
 
 /***/ }),
-/* 90 */
+/* 69 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -6028,7 +5734,7 @@
 	module.exports = emptyFunction;
 
 /***/ }),
-/* 91 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6037,27 +5743,27 @@
 	  value: true
 	});
 	
-	var _utils = __webpack_require__(92);
+	var _utils = __webpack_require__(71);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
-	var _getOffsetParent = __webpack_require__(94);
+	var _getOffsetParent = __webpack_require__(73);
 	
 	var _getOffsetParent2 = _interopRequireDefault(_getOffsetParent);
 	
-	var _getVisibleRectForElement = __webpack_require__(95);
+	var _getVisibleRectForElement = __webpack_require__(74);
 	
 	var _getVisibleRectForElement2 = _interopRequireDefault(_getVisibleRectForElement);
 	
-	var _adjustForViewport = __webpack_require__(97);
+	var _adjustForViewport = __webpack_require__(76);
 	
 	var _adjustForViewport2 = _interopRequireDefault(_adjustForViewport);
 	
-	var _getRegion = __webpack_require__(98);
+	var _getRegion = __webpack_require__(77);
 	
 	var _getRegion2 = _interopRequireDefault(_getRegion);
 	
-	var _getElFuturePos = __webpack_require__(99);
+	var _getElFuturePos = __webpack_require__(78);
 	
 	var _getElFuturePos2 = _interopRequireDefault(_getElFuturePos);
 	
@@ -6261,7 +5967,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 92 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6272,7 +5978,7 @@
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
-	var _propertyUtils = __webpack_require__(93);
+	var _propertyUtils = __webpack_require__(72);
 	
 	var RE_NUM = /[\-+]?(?:\d*\.|)\d+(?:[eE][\-+]?\d+|)/.source;
 	
@@ -6837,7 +6543,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 93 */
+/* 72 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -6952,7 +6658,7 @@
 	}
 
 /***/ }),
-/* 94 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6961,7 +6667,7 @@
 	  value: true
 	});
 	
-	var _utils = __webpack_require__(92);
+	var _utils = __webpack_require__(71);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -7013,7 +6719,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 95 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7022,15 +6728,15 @@
 	  value: true
 	});
 	
-	var _utils = __webpack_require__(92);
+	var _utils = __webpack_require__(71);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
-	var _getOffsetParent = __webpack_require__(94);
+	var _getOffsetParent = __webpack_require__(73);
 	
 	var _getOffsetParent2 = _interopRequireDefault(_getOffsetParent);
 	
-	var _isAncestorFixed = __webpack_require__(96);
+	var _isAncestorFixed = __webpack_require__(75);
 	
 	var _isAncestorFixed2 = _interopRequireDefault(_isAncestorFixed);
 	
@@ -7123,7 +6829,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 96 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7133,7 +6839,7 @@
 	});
 	exports['default'] = isAncestorFixed;
 	
-	var _utils = __webpack_require__(92);
+	var _utils = __webpack_require__(71);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -7158,7 +6864,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 97 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7167,7 +6873,7 @@
 	  value: true
 	});
 	
-	var _utils = __webpack_require__(92);
+	var _utils = __webpack_require__(71);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -7218,7 +6924,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 98 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7227,7 +6933,7 @@
 	  value: true
 	});
 	
-	var _utils = __webpack_require__(92);
+	var _utils = __webpack_require__(71);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -7259,7 +6965,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 99 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7268,7 +6974,7 @@
 	  value: true
 	});
 	
-	var _getAlignOffset = __webpack_require__(100);
+	var _getAlignOffset = __webpack_require__(79);
 	
 	var _getAlignOffset2 = _interopRequireDefault(_getAlignOffset);
 	
@@ -7289,7 +6995,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 100 */
+/* 79 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -7332,7 +7038,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 101 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7453,7 +7159,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 102 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7600,7 +7306,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 103 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7609,7 +7315,7 @@
 	  value: true
 	});
 	
-	var _Button = __webpack_require__(104);
+	var _Button = __webpack_require__(83);
 	
 	var _Button2 = _interopRequireDefault(_Button);
 	
@@ -7619,7 +7325,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 104 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7692,15 +7398,16 @@
 	     * @title <button> 的 type
 	     * @veIgnore
 	     */
-	    htmlType: _propTypes2["default"].oneOf(['submit', 'button', 'reset'])
+	    htmlType: _propTypes2["default"].oneOf(['submit', 'button', 'reset']),
+	    isSubmit: _propTypes2["default"].bool //是否作为form的提交按钮
 	};
 	
 	var defaultProps = {
 	    disabled: false,
 	    htmlType: 'button',
 	    clsPrefix: 'u-button',
-	    bordered: false
-	
+	    bordered: false,
+	    isSubmit: false
 	};
 	
 	var sizeMap = {
@@ -7747,7 +7454,8 @@
 	            children = _props.children,
 	            htmlType = _props.htmlType,
 	            clsPrefix = _props.clsPrefix,
-	            others = _objectWithoutProperties(_props, ['colors', 'shape', 'disabled', 'className', 'size', 'bordered', 'children', 'htmlType', 'clsPrefix']);
+	            isSubmit = _props.isSubmit,
+	            others = _objectWithoutProperties(_props, ['colors', 'shape', 'disabled', 'className', 'size', 'bordered', 'children', 'htmlType', 'clsPrefix', 'isSubmit']);
 	
 	        var clsObj = {};
 	        if (className) {
@@ -7786,7 +7494,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 105 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7797,11 +7505,11 @@
 	
 	var _react = __webpack_require__(4);
 	
-	var _src = __webpack_require__(106);
+	var _src = __webpack_require__(85);
 	
 	var _src2 = _interopRequireDefault(_src);
 	
-	var _beeButton = __webpack_require__(103);
+	var _beeButton = __webpack_require__(82);
 	
 	var _beeButton2 = _interopRequireDefault(_beeButton);
 	
@@ -8110,7 +7818,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 106 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8119,7 +7827,7 @@
 	  value: true
 	});
 	
-	var _Popover = __webpack_require__(107);
+	var _Popover = __webpack_require__(86);
 	
 	var _Popover2 = _interopRequireDefault(_Popover);
 
@@ -8129,7 +7837,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 107 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8150,7 +7858,7 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _createChainedFunction = __webpack_require__(71);
+	var _createChainedFunction = __webpack_require__(50);
 	
 	var _createChainedFunction2 = _interopRequireDefault(_createChainedFunction);
 	
@@ -8162,19 +7870,19 @@
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
-	var _Overlay = __webpack_require__(108);
+	var _Overlay = __webpack_require__(87);
 	
 	var _Overlay2 = _interopRequireDefault(_Overlay);
 	
-	var _Portal = __webpack_require__(110);
+	var _Portal = __webpack_require__(89);
 	
 	var _Portal2 = _interopRequireDefault(_Portal);
 	
-	var _Content = __webpack_require__(128);
+	var _Content = __webpack_require__(107);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
-	var _contains = __webpack_require__(117);
+	var _contains = __webpack_require__(96);
 	
 	var _contains2 = _interopRequireDefault(_contains);
 	
@@ -8517,7 +8225,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 108 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8540,13 +8248,13 @@
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
-	var _BaseOverlay = __webpack_require__(109);
+	var _BaseOverlay = __webpack_require__(88);
 	
 	var _BaseOverlay2 = _interopRequireDefault(_BaseOverlay);
 	
 	var _tinperBeeCore = __webpack_require__(26);
 	
-	var _Fade = __webpack_require__(126);
+	var _Fade = __webpack_require__(105);
 	
 	var _Fade2 = _interopRequireDefault(_Fade);
 	
@@ -8671,7 +8379,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 109 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8694,15 +8402,15 @@
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
-	var _Portal = __webpack_require__(110);
+	var _Portal = __webpack_require__(89);
 	
 	var _Portal2 = _interopRequireDefault(_Portal);
 	
-	var _Position = __webpack_require__(114);
+	var _Position = __webpack_require__(93);
 	
 	var _Position2 = _interopRequireDefault(_Position);
 	
-	var _RootCloseWrapper = __webpack_require__(123);
+	var _RootCloseWrapper = __webpack_require__(102);
 	
 	var _RootCloseWrapper2 = _interopRequireDefault(_RootCloseWrapper);
 	
@@ -8927,7 +8635,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 110 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8948,11 +8656,11 @@
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
-	var _ownerDocument = __webpack_require__(111);
+	var _ownerDocument = __webpack_require__(90);
 	
 	var _ownerDocument2 = _interopRequireDefault(_ownerDocument);
 	
-	var _getContainer = __webpack_require__(113);
+	var _getContainer = __webpack_require__(92);
 	
 	var _getContainer2 = _interopRequireDefault(_getContainer);
 	
@@ -9135,7 +8843,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 111 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9152,7 +8860,7 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _ownerDocument = __webpack_require__(112);
+	var _ownerDocument = __webpack_require__(91);
 	
 	var _ownerDocument2 = _interopRequireDefault(_ownerDocument);
 	
@@ -9161,7 +8869,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 112 */
+/* 91 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -9176,7 +8884,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 113 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9205,7 +8913,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 114 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9234,15 +8942,15 @@
 	
 	var _tinperBeeCore = __webpack_require__(26);
 	
-	var _calculatePosition = __webpack_require__(115);
+	var _calculatePosition = __webpack_require__(94);
 	
 	var _calculatePosition2 = _interopRequireDefault(_calculatePosition);
 	
-	var _getContainer = __webpack_require__(113);
+	var _getContainer = __webpack_require__(92);
 	
 	var _getContainer2 = _interopRequireDefault(_getContainer);
 	
-	var _ownerDocument = __webpack_require__(111);
+	var _ownerDocument = __webpack_require__(90);
 	
 	var _ownerDocument2 = _interopRequireDefault(_ownerDocument);
 	
@@ -9421,7 +9129,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 115 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9431,19 +9139,19 @@
 	});
 	exports["default"] = calculatePosition;
 	
-	var _offset = __webpack_require__(116);
+	var _offset = __webpack_require__(95);
 	
 	var _offset2 = _interopRequireDefault(_offset);
 	
-	var _position = __webpack_require__(119);
+	var _position = __webpack_require__(98);
 	
 	var _position2 = _interopRequireDefault(_position);
 	
-	var _scrollTop = __webpack_require__(121);
+	var _scrollTop = __webpack_require__(100);
 	
 	var _scrollTop2 = _interopRequireDefault(_scrollTop);
 	
-	var _ownerDocument = __webpack_require__(111);
+	var _ownerDocument = __webpack_require__(90);
 	
 	var _ownerDocument2 = _interopRequireDefault(_ownerDocument);
 	
@@ -9565,7 +9273,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 116 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9575,15 +9283,15 @@
 	});
 	exports.default = offset;
 	
-	var _contains = __webpack_require__(117);
+	var _contains = __webpack_require__(96);
 	
 	var _contains2 = _interopRequireDefault(_contains);
 	
-	var _isWindow = __webpack_require__(118);
+	var _isWindow = __webpack_require__(97);
 	
 	var _isWindow2 = _interopRequireDefault(_isWindow);
 	
-	var _ownerDocument = __webpack_require__(112);
+	var _ownerDocument = __webpack_require__(91);
 	
 	var _ownerDocument2 = _interopRequireDefault(_ownerDocument);
 	
@@ -9615,7 +9323,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 117 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9654,7 +9362,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 118 */
+/* 97 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -9669,7 +9377,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 119 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9682,19 +9390,19 @@
 	
 	exports.default = position;
 	
-	var _offset = __webpack_require__(116);
+	var _offset = __webpack_require__(95);
 	
 	var _offset2 = _interopRequireDefault(_offset);
 	
-	var _offsetParent = __webpack_require__(120);
+	var _offsetParent = __webpack_require__(99);
 	
 	var _offsetParent2 = _interopRequireDefault(_offsetParent);
 	
-	var _scrollTop = __webpack_require__(121);
+	var _scrollTop = __webpack_require__(100);
 	
 	var _scrollTop2 = _interopRequireDefault(_scrollTop);
 	
-	var _scrollLeft = __webpack_require__(122);
+	var _scrollLeft = __webpack_require__(101);
 	
 	var _scrollLeft2 = _interopRequireDefault(_scrollLeft);
 	
@@ -9735,7 +9443,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 120 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9745,7 +9453,7 @@
 	});
 	exports.default = offsetParent;
 	
-	var _ownerDocument = __webpack_require__(112);
+	var _ownerDocument = __webpack_require__(91);
 	
 	var _ownerDocument2 = _interopRequireDefault(_ownerDocument);
 	
@@ -9772,7 +9480,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 121 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9782,7 +9490,7 @@
 	});
 	exports.default = scrollTop;
 	
-	var _isWindow = __webpack_require__(118);
+	var _isWindow = __webpack_require__(97);
 	
 	var _isWindow2 = _interopRequireDefault(_isWindow);
 	
@@ -9798,7 +9506,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 122 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9808,7 +9516,7 @@
 	});
 	exports.default = scrollTop;
 	
-	var _isWindow = __webpack_require__(118);
+	var _isWindow = __webpack_require__(97);
 	
 	var _isWindow2 = _interopRequireDefault(_isWindow);
 	
@@ -9824,7 +9532,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 123 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9833,7 +9541,7 @@
 	  value: true
 	});
 	
-	var _contains = __webpack_require__(117);
+	var _contains = __webpack_require__(96);
 	
 	var _contains2 = _interopRequireDefault(_contains);
 	
@@ -9849,11 +9557,11 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _addEventListener = __webpack_require__(124);
+	var _addEventListener = __webpack_require__(103);
 	
 	var _addEventListener2 = _interopRequireDefault(_addEventListener);
 	
-	var _ownerDocument = __webpack_require__(111);
+	var _ownerDocument = __webpack_require__(90);
 	
 	var _ownerDocument2 = _interopRequireDefault(_ownerDocument);
 	
@@ -9986,7 +9694,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 124 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10009,7 +9717,7 @@
 	
 	var _on2 = _interopRequireDefault(_on);
 	
-	var _off = __webpack_require__(125);
+	var _off = __webpack_require__(104);
 	
 	var _off2 = _interopRequireDefault(_off);
 	
@@ -10018,7 +9726,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 125 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10048,7 +9756,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 126 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10071,7 +9779,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Transition = __webpack_require__(127);
+	var _Transition = __webpack_require__(106);
 	
 	var _Transition2 = _interopRequireDefault(_Transition);
 	
@@ -10169,7 +9877,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 127 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10518,7 +10226,7 @@
 	exports["default"] = Transition;
 
 /***/ }),
-/* 128 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10677,7 +10385,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 129 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10688,11 +10396,11 @@
 	
 	var _react = __webpack_require__(4);
 	
-	var _src = __webpack_require__(106);
+	var _src = __webpack_require__(85);
 	
 	var _src2 = _interopRequireDefault(_src);
 	
-	var _beeButton = __webpack_require__(103);
+	var _beeButton = __webpack_require__(82);
 	
 	var _beeButton2 = _interopRequireDefault(_beeButton);
 	
