@@ -181,7 +181,7 @@ var Popover = function (_Component) {
     Popover.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
         if (nextProps.hasOwnProperty('show')) {
             if (nextProps.show) {
-                this.handleToggle();
+                this.handleShow();
             } else {
                 this.handleHide();
             }
@@ -282,7 +282,6 @@ var _initialiseProps = function _initialiseProps() {
     var _this2 = this;
 
     this.handleToggle = function () {
-
         if (!_this2.state.show) {
             _this2.show();
         } else {
@@ -348,7 +347,15 @@ var _initialiseProps = function _initialiseProps() {
     };
 
     this.handleHide = function () {
-        _this2.hide();
+        if (_this2.state.show) {
+            _this2.hide();
+        }
+    };
+
+    this.handleShow = function () {
+        if (!_this2.state.show) {
+            _this2.show();
+        }
     };
 
     this.show = function () {

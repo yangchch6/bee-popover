@@ -132,7 +132,7 @@ class Popover extends Component{
     componentWillReceiveProps(nextProps) {
         if(nextProps.hasOwnProperty('show')){
             if(nextProps.show){
-                this.handleToggle();
+                this.handleShow();
             }else{
                 this.handleHide();
             }
@@ -150,7 +150,6 @@ class Popover extends Component{
     }
 
     handleToggle = () => {
-
         if (!this.state.show) {
             this.show();
         }else{
@@ -223,7 +222,15 @@ class Popover extends Component{
 
 
     handleHide = () => {
-        this.hide();
+        if(this.state.show){
+            this.hide();
+        }
+    }
+
+    handleShow = () => {
+        if(!this.state.show){
+            this.show();
+        }
     }
 
     show = () => {
