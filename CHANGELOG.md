@@ -1,3 +1,15 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/tinper-bee/bee-popconfirm/compare/0.0.7...1.0.2) (2018-02-01)
+
+
+### Bug Fixes
+
+* demo展示bug ([1eb95fa](https://github.com/tinper-bee/bee-popconfirm/commit/1eb95fa))
+* 修改示例 ([316378a](https://github.com/tinper-bee/bee-popconfirm/commit/316378a))
+* **bee-popover:** 修复受控制的Popover，会自动关闭bug ([a1f3539](https://github.com/tinper-bee/bee-popconfirm/commit/a1f3539))
+
+
+
 <a name="0.0.7"></a>
 ## [0.0.7](https://github.com/tinper-bee/bee-popconfirm/compare/0.0.6...0.0.7) (2017-11-02)
 
