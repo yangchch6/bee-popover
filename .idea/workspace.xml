@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c496ed17-8e6f-4cf4-b839-c7e7135574b4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/index.js" afterPath="$PROJECT_DIR$/demo/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/demo.js" afterPath="$PROJECT_DIR$/dist/demo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/demo.js.map" afterPath="$PROJECT_DIR$/dist/demo.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Popover.js" afterPath="$PROJECT_DIR$/src/Popover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/api.md" afterPath="$PROJECT_DIR$/docs/api.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +21,8 @@
       <file leaf-file-name="Popover.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Popover.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1194">
-              <caret line="151" column="26" lean-forward="false" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+            <state relative-caret-position="137">
+              <caret line="335" column="42" lean-forward="false" selection-start-line="335" selection-start-column="33" selection-end-line="335" selection-end-column="42" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -32,24 +30,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Content.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Content.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+            <state relative-caret-position="24">
+              <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <marker date="1517501497061" expanded="true" signature="0:3" ph="{&quot;name&quot;: &quot;bee-popover&quot;...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="api.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/api.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="376">
+                <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="33" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="61">
+                <caret line="61" column="33" lean-forward="false" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+                <folding>
+                  <marker date="1526005653692" expanded="true" signature="1135:1230" ph="&lt;Popconfirm/&gt;" />
+                  <marker date="1526005653692" expanded="true" signature="1264:1488" ph="{...}" />
+                  <marker date="1526005653692" expanded="true" signature="1280:1486" ph="{...}" />
+                  <marker date="1526005653692" expanded="true" signature="1313:1470" ph="&lt;OverlayTrigger/&gt;" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Overlay.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/bee-overlay/src/Overlay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="45" column="27" lean-forward="false" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="-141">
+              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+              <folding>
+                <element signature="e#1#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Portal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/bee-overlay/src/Portal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,28 +100,8 @@
       <file leaf-file-name="Demo1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/demolist/Demo1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2056">
+            <state relative-caret-position="4848">
               <caret line="208" column="21" lean-forward="false" selection-start-line="208" selection-start-column="21" selection-end-line="208" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Demo1.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/demolist/Demo1.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -87,16 +110,12 @@
       <file leaf-file-name="Demo2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/demolist/Demo2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
+            <state relative-caret-position="720">
               <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#70#102#0" expanded="true" />
                 <marker date="1517501409168" expanded="true" signature="1079:1278" ph="&lt;Popover/&gt;" />
-                <marker date="1517501409168" expanded="true" signature="1079:1297" ph="&lt;div/&gt;" />
-                <marker date="1517501409168" expanded="true" signature="1079:1313" ph="{...}" />
-                <marker date="1517501409168" expanded="true" signature="1079:1315" ph="{...}" />
-                <marker date="1517501409168" expanded="true" signature="1118:1251" ph="&lt;Button/&gt;" />
               </folding>
             </state>
           </provider>
@@ -117,16 +136,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1128">
               <caret line="51" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PopoverDemo.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/PopoverDemo.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -167,7 +176,6 @@
         <option value="$PROJECT_DIR$/demo/index.js" />
         <option value="$PROJECT_DIR$/node_modules/bee-overlay/package.json" />
         <option value="$PROJECT_DIR$/src/Popover.scss" />
-        <option value="$PROJECT_DIR$/docs/api.md" />
         <option value="$PROJECT_DIR$/src/Content.js" />
         <option value="$PROJECT_DIR$/demo/demolist/Demo1.js" />
         <option value="$PROJECT_DIR$/demo/index-demo-base.js" />
@@ -178,6 +186,8 @@
         <option value="$PROJECT_DIR$/src/Popover.js" />
         <option value="$PROJECT_DIR$/demo/demolist/Demo2.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/docs/api.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -212,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -234,13 +245,35 @@
             <path>
               <item name="bee-popover" type="b2602c69:ProjectViewProjectNode" />
               <item name="bee-popover" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bee-popover" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bee-popover" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bee-popover" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bee-popover" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="bee-overlay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bee-popover" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bee-popover" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="bee-overlay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bee-popover" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bee-popover" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,12 +389,13 @@
       <workItem from="1513664177943" duration="133000" />
       <workItem from="1516532167112" duration="268000" />
       <workItem from="1517310325335" duration="294000" />
-      <workItem from="1517500356527" duration="1001000" />
+      <workItem from="1517500356527" duration="1092000" />
+      <workItem from="1526004527647" duration="997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31012000" />
+    <option name="totallyTimeSpent" value="32100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="946" extended-state="6" />
@@ -416,38 +450,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/demolist/Demo1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/demolist/Demo2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="38" lean-forward="false" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#70#102#0" expanded="true" />
-            <marker date="1517501409168" expanded="true" signature="1079:1278" ph="&lt;Popover/&gt;" />
-            <marker date="1517501409168" expanded="true" signature="1079:1297" ph="&lt;div/&gt;" />
-            <marker date="1517501409168" expanded="true" signature="1079:1313" ph="{...}" />
-            <marker date="1517501409168" expanded="true" signature="1079:1315" ph="{...}" />
-            <marker date="1517501409168" expanded="true" signature="1118:1251" ph="&lt;Button/&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Popover.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -463,7 +465,7 @@
         <state relative-caret-position="2028">
           <caret line="82" column="20" lean-forward="false" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -472,7 +474,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1274">
           <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
-          <folding />
+          <folding>
+            <marker date="1517501497061" expanded="true" signature="0:3" ph="{&quot;name&quot;: &quot;bee-popover&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -492,10 +496,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#70#102#0" expanded="true" />
             <marker date="1517501409168" expanded="true" signature="1079:1278" ph="&lt;Popover/&gt;" />
-            <marker date="1517501409168" expanded="true" signature="1079:1297" ph="&lt;div/&gt;" />
-            <marker date="1517501409168" expanded="true" signature="1079:1313" ph="{...}" />
-            <marker date="1517501409168" expanded="true" signature="1079:1315" ph="{...}" />
-            <marker date="1517501409168" expanded="true" signature="1118:1251" ph="&lt;Button/&gt;" />
           </folding>
         </state>
       </provider>
@@ -528,7 +528,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
           <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding />
+          <folding>
+            <marker date="1517501497061" expanded="true" signature="0:3" ph="{&quot;name&quot;: &quot;bee-popover&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -575,7 +577,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
           <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding />
+          <folding>
+            <marker date="1517501497061" expanded="true" signature="0:3" ph="{&quot;name&quot;: &quot;bee-popover&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -622,7 +626,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
           <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding />
+          <folding>
+            <marker date="1517501497061" expanded="true" signature="0:3" ph="{&quot;name&quot;: &quot;bee-popover&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -669,7 +675,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
           <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding />
+          <folding>
+            <marker date="1517501497061" expanded="true" signature="0:3" ph="{&quot;name&quot;: &quot;bee-popover&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -724,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/api.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Popover.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4008">
@@ -743,7 +744,7 @@
         <state relative-caret-position="72">
           <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,43 +792,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/demolist/Demo1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2056">
+        <state relative-caret-position="4848">
           <caret line="208" column="21" lean-forward="false" selection-start-line="208" selection-start-column="21" selection-end-line="208" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Popover.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1194">
-          <caret line="151" column="26" lean-forward="false" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/demolist/Demo2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
+        <state relative-caret-position="720">
           <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#70#102#0" expanded="true" />
             <marker date="1517501409168" expanded="true" signature="1079:1278" ph="&lt;Popover/&gt;" />
-            <marker date="1517501409168" expanded="true" signature="1079:1297" ph="&lt;div/&gt;" />
-            <marker date="1517501409168" expanded="true" signature="1079:1313" ph="{...}" />
-            <marker date="1517501409168" expanded="true" signature="1079:1315" ph="{...}" />
-            <marker date="1517501409168" expanded="true" signature="1118:1251" ph="&lt;Button/&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="45" column="27" lean-forward="false" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="24">
+          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding>
+            <marker date="1517501497061" expanded="true" signature="0:3" ph="{&quot;name&quot;: &quot;bee-popover&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Popover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="335" column="42" lean-forward="false" selection-start-line="335" selection-start-column="33" selection-end-line="335" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bee-overlay/src/Overlay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding>
+            <element signature="e#1#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bee-overlay/src/Portal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/api.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="376">
+            <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="33" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="61">
+            <caret line="61" column="33" lean-forward="false" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+            <folding>
+              <marker date="1526005653692" expanded="true" signature="1135:1230" ph="&lt;Popconfirm/&gt;" />
+              <marker date="1526005653692" expanded="true" signature="1264:1488" ph="{...}" />
+              <marker date="1526005653692" expanded="true" signature="1280:1486" ph="{...}" />
+              <marker date="1526005653692" expanded="true" signature="1313:1470" ph="&lt;OverlayTrigger/&gt;" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

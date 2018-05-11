@@ -15,3 +15,4 @@
 |arrowOffsetTop|弹出框箭头向上偏移量|string/number|-|
 |arrowOffsetLeft|弹出框箭头向左偏移量|string/number|-|
 |title|标题|node|-|
+|container|标题|node/function|body|
