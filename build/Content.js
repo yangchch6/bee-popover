@@ -97,6 +97,24 @@ var Content = function (_React$Component) {
         return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
     }
 
+    Content.prototype.getInversePlacement = function getInversePlacement(className, placement) {
+        if (placement && className && className.includes('inverse-arrow')) {
+            var inversePlacement = null;
+            if (placement.startsWith('left')) {
+                placement = placement.replace('left', 'right');
+            } else if (placement.startsWith('right')) {
+                placement = placement.replace('right', 'left');
+            } else if (placement.startsWith('top')) {
+                placement = placement.replace('top', 'bottom');
+            } else if (placement.startsWith('bottom')) {
+                placement = placement.replace('bottom', 'top');
+            }
+            return inversePlacement ? inversePlacement : placement;
+        } else {
+            return placement;
+        }
+    };
+
     Content.prototype.render = function render() {
         var _classes;
 
@@ -114,7 +132,8 @@ var Content = function (_React$Component) {
             trigger = _props.trigger,
             others = _objectWithoutProperties(_props, ['placement', 'positionTop', 'positionLeft', 'arrowOffsetTop', 'arrowOffsetLeft', 'clsPrefix', 'className', 'style', 'id', 'children', 'trigger']);
 
-        var classes = (_classes = {}, _defineProperty(_classes, '' + clsPrefix, true), _defineProperty(_classes, PLACECLASS[placement], true), _classes);
+        var resPlacement = this.getInversePlacement(className, placement);
+        var classes = (_classes = {}, _defineProperty(_classes, '' + clsPrefix, true), _defineProperty(_classes, PLACECLASS[resPlacement], true), _classes);
 
         var outerStyle = _extends({
             display: 'block',
@@ -122,10 +141,10 @@ var Content = function (_React$Component) {
             left: positionLeft
         }, style);
 
-        var arrowStyle = {
+        /* const arrowStyle = {
             top: arrowOffsetTop,
-            left: arrowOffsetLeft
-        };
+            left: arrowOffsetLeft,
+        }; */
 
         return _react2["default"].createElement(
             'div',
@@ -135,7 +154,7 @@ var Content = function (_React$Component) {
                 className: (0, _classnames2["default"])(className, classes),
                 style: outerStyle
             }, others),
-            _react2["default"].createElement('div', { className: 'arrow', style: arrowStyle }),
+            _react2["default"].createElement('div', { className: 'arrow' }),
             _react2["default"].createElement(
                 'div',
                 { className: (0, _classnames2["default"])(clsPrefix + '-content') },

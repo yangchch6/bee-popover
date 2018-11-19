@@ -67,6 +67,27 @@ const PLACECLASS = {
 };
 
 class Content extends React.Component {
+    getInversePlacement(className, placement) {
+        if (placement && className && className.includes('inverse-arrow')) {
+            let inversePlacement = null;
+            if (placement.startsWith('left')) {
+                placement = placement.replace('left', 'right');
+
+            } else if (placement.startsWith('right')) {
+                placement = placement.replace('right', 'left');
+
+            } else if (placement.startsWith('top')) {
+                placement = placement.replace('top', 'bottom');
+
+            } else if (placement.startsWith('bottom')) {
+                placement = placement.replace('bottom', 'top');
+
+            }
+            return inversePlacement ? inversePlacement : placement;
+        } else {
+            return placement
+        }
+    }
     render() {
         const {
             placement,
@@ -83,9 +104,10 @@ class Content extends React.Component {
             ...others
         } = this.props;
 
+        let resPlacement = this.getInversePlacement(className, placement)
         const classes = {
             [`${clsPrefix}`]: true,
-            [PLACECLASS[placement]]: true,
+            [PLACECLASS[resPlacement]]: true,
         };
 
         const outerStyle = {
@@ -95,10 +117,10 @@ class Content extends React.Component {
             ...style,
         };
 
-        const arrowStyle = {
+        /* const arrowStyle = {
             top: arrowOffsetTop,
             left: arrowOffsetLeft,
-        };
+        }; */
 
         return (
             <div
@@ -108,7 +130,7 @@ class Content extends React.Component {
                 style={outerStyle}
                 {...others}
             >
-                <div className="arrow" style={arrowStyle}/>
+                <div className="arrow"/>
 
                 <div className={classnames(`${clsPrefix}-content`)}>
                     { children }
