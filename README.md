@@ -60,6 +60,9 @@ import "./node_modules/bee-popconfirm/build/Popconfirm.css"
 |arrowOffsetLeft|弹出框箭头向左偏移量|string/number|-|
 |title|标题|node|-|
 |container|标题|node/function|body|
+|trigger|触发现实和隐藏的事件类型|click/hover/focus|hover|
+|show|控制显示和隐藏|bool|-|
+|defaultOverlayShown|默认显示的状态|bool|false|
 
 
 #### 开发调试
