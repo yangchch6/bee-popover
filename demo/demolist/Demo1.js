@@ -14,6 +14,10 @@ import Button from 'bee-button';
         super(props);
     }
 
+    onHide = () => {
+        console.log('onHide')
+    }
+
     render() {
         let content = (
             <div>
@@ -30,6 +34,7 @@ import Button from 'bee-button';
                 <Popover
                     placement="leftTop"
                     content={content}
+                    onHide={this.onHide}
                     trigger="hover"
                     id="leftTop"
                 >

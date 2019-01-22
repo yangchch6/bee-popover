@@ -238,6 +238,8 @@ class Popover extends Component{
     }
 
     hide = () => {
+        let { onHide } = this.props;
+        onHide && onHide()
         this.setState({ show: false });
     }
 

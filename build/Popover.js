@@ -363,6 +363,9 @@ var _initialiseProps = function _initialiseProps() {
     };
 
     this.hide = function () {
+        var onHide = _this2.props.onHide;
+
+        onHide && onHide();
         _this2.setState({ show: false });
     };
 

@@ -63,6 +63,7 @@ import "./node_modules/bee-popconfirm/build/Popconfirm.css"
 |trigger|触发现实和隐藏的事件类型|click/hover/focus|hover|
 |show|控制显示和隐藏|bool|-|
 |defaultOverlayShown|默认显示的状态|bool|false|
+|onHide|隐藏时的回调|function|-|
 
 
 #### 开发调试
