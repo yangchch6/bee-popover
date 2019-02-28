@@ -37,7 +37,7 @@ $popover-fallback-border-color: #fff;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid $popover-border-color;
-    border-radius: 6px;
+    border-radius:$border-radius;
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
     &>.arrow, &>.arrow:after {
         position: absolute;
